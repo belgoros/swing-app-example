@@ -1,9 +1,6 @@
 package com.sca.swing.util;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.JButton;
+import javax.swing.*;
 
 public class ButtonUtil {
     public static JButton newButton(String name, String text) {
@@ -13,11 +10,6 @@ public class ButtonUtil {
     }
 
     public static void addActionToButton(JButton button, final Runnable action) {
-        button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                action.run();
-            }
-        });
+        button.addActionListener(e -> action.run());
     }
 }
