@@ -25,9 +25,9 @@ public class SimpleCopyApplicationTest {
 
     @Test
     public void shouldCopyTextInLabelWhenClickingButton() {
-        window.textBox("textToCopy").enterText("Some random text");
+        window.textBox("textToCopy").enterText("hello");
         window.button("copyButton").click();
-        window.label("copiedText").requireText("Some random text");
+        window.label("copiedText").requireText("hello");
     }
 
     @After
